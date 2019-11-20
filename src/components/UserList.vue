@@ -1,6 +1,6 @@
 <template>
   <div class="user-list">
-    <h4>Members</h4>
+    <h4>用户</h4>
     <hr />
     <b-list-group>
       <b-list-group-item v-for="user in users" :key="user.username">

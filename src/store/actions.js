@@ -20,7 +20,8 @@ export default {
       commit("setReconnect", false);
 
       // Test state.user
-      console.log(state.user);
+      // console.log(state.user);
+      // console.log(currentUser);
 
       const rooms = currentUser.rooms.map(room => ({
         id: room.id,

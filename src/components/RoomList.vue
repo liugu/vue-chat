@@ -1,11 +1,11 @@
 <template>
   <div class="room-list">
-    <h4>Channels</h4>
+    <h4>频道</h4>
     <hr />
     <b-list-group v-if="activeRoom">
       <b-list-group-item
         v-for="room in rooms"
-        :key="room.name"
+        :key="room.id"
         :active="activeRoom.id === room.id"
         href="#"
         @click="onChange(room)"
@@ -23,6 +23,10 @@ export default {
   name: "RoomList",
   computed: {
     ...mapState(["rooms", "activeRoom"])
+  },
+
+  created() {
+    // console.log(this.rooms);
   },
   methods: {
     ...mapActions(["changeRoom"]),
